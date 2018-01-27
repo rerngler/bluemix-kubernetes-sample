@@ -1,5 +1,8 @@
 #!/bin/bash
 
+bx cs region-set ap-south
+bx cs cluster-config mycluster
+
 echo "Create Guestbook"
 IP_ADDR=$(bx cs workers $CLUSTER_NAME | grep normal | awk '{ print $2 }')
 if [ -z $IP_ADDR ]; then
