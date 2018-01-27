@@ -21,6 +21,7 @@ if [ $? -ne 0 ]; then
   echo "Failed to authenticate to Bluemix"
   exit 1
 fi
+bx cs region-set ap-south
 
 # Init container clusters
 echo "bx cs init"
